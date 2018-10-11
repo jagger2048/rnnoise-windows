@@ -75,6 +75,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include\AduioFile;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include\rnnoise;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -104,6 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include\rnnoise;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include\AduioFile;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
