@@ -76,7 +76,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
-    <IncludePath>D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include\AduioFile;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include\rnnoise;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)include\;$(ProjectDir)include\rnnoise\;$(ProjectDir)include\audiofile\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -100,13 +100,13 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include\rnnoise;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include\AduioFile;D:\Repository\rnnoise-windows\Rnnoise-windows\Rnnoise-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,17 +150,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClCompile Include="include\rnnoise\celt_lpc.c" />
+    <ClCompile Include="include\rnnoise\kiss_fft.c" />
+    <ClCompile Include="include\rnnoise\pitch.c" />
+    <ClCompile Include="include\rnnoise\rnn.c" />
+    <ClCompile Include="include\rnnoise\rnn_data.c" />
+    <ClCompile Include="Rnnoise-windows.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Rnnoise-windows.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClInclude Include="include\audiofile\dr_wav.h" />
+    <ClInclude Include="include\audiofile\wavfile.h" />
+    <ClInclude Include="include\rnnoise\arch.h" />
+    <ClInclude Include="include\rnnoise\celt_lpc.h" />
+    <ClInclude Include="include\rnnoise\common.h" />
+    <ClInclude Include="include\rnnoise\denoise.h" />
+    <ClInclude Include="include\rnnoise\kiss_fft.h" />
+    <ClInclude Include="include\rnnoise\opus_types.h" />
+    <ClInclude Include="include\rnnoise\pitch.h" />
+    <ClInclude Include="include\rnnoise\rnn.h" />
+    <ClInclude Include="include\rnnoise\rnnoise.h" />
+    <ClInclude Include="include\rnnoise\rnn_data.h" />
+    <ClInclude Include="include\rnnoise\tansig_table.h" />
+    <ClInclude Include="include\rnnoise\_kiss_fft_guts.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\rnnoise\rnn_train.py" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

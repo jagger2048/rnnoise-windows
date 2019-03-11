@@ -41,7 +41,7 @@
 //#include "stack_alloc.h"
 //#include "mathops.h"
 
-#include "celt_lpc.c"
+#include "celt_lpc.h"
 #include "math.h"
 
 static void find_best_pitch(opus_val32 *xcorr, opus_val16 *y, int len,
