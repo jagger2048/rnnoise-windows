@@ -36,11 +36,10 @@
 #include <math.h>
 #include "rnnoise.h"
 #include "pitch.h"
-// #include "pitch.c"
 #include "arch.h"
 #include "rnn.h"
 #include "rnn_data.h"
-// ���� M_PI
+// define M_PI
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
 #endif // !M_PI
@@ -297,7 +296,7 @@ int rnnoise_init(DenoiseState *st) {
 
 DenoiseState *rnnoise_create() {
   DenoiseState *st;
-  st = (DenoiseState *)malloc(rnnoise_get_size());   // �޸�ĳ��δ֪����
+  st = (DenoiseState *)malloc(rnnoise_get_size());   // Modified for MSVC
   rnnoise_init(st);
   return st;
 }

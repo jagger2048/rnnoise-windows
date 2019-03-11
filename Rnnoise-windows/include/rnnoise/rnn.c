@@ -24,7 +24,7 @@
    NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-
+#pragma once
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -34,7 +34,6 @@
 #include "common.h"
 #include "arch.h"
 #include "tansig_table.h"
-#include "rnn.h"
 #include "rnn_data.h"
 #include <stdio.h>
 

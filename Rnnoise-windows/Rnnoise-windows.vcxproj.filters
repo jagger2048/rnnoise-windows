@@ -13,21 +13,80 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="rw_wavfile">
+      <UniqueIdentifier>{d78d97c8-1e13-40d0-a195-77d70da8662d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rnn-lib">
+      <UniqueIdentifier>{901c215d-0660-456b-aaa0-a39bdafa1bbb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Rnnoise-windows.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="include\rnnoise\celt_lpc.c">
+      <Filter>rnn-lib</Filter>
+    </ClCompile>
+    <ClCompile Include="include\rnnoise\kiss_fft.c">
+      <Filter>rnn-lib</Filter>
+    </ClCompile>
+    <ClCompile Include="include\rnnoise\pitch.c">
+      <Filter>rnn-lib</Filter>
+    </ClCompile>
+    <ClCompile Include="include\rnnoise\rnn.c">
+      <Filter>rnn-lib</Filter>
+    </ClCompile>
+    <ClCompile Include="include\rnnoise\rnn_data.c">
+      <Filter>rnn-lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\rnnoise\_kiss_fft_guts.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\arch.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\celt_lpc.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\common.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\denoise.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\kiss_fft.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\opus_types.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\pitch.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\rnn.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\rnn_data.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\rnnoise.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rnnoise\tansig_table.h">
+      <Filter>rnn-lib</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audiofile\dr_wav.h">
+      <Filter>rw_wavfile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\audiofile\wavfile.h">
+      <Filter>rw_wavfile</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\rnnoise\rnn_train.py">
+      <Filter>rnn-lib</Filter>
+    </None>
   </ItemGroup>
 </Project>

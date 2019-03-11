@@ -37,6 +37,10 @@
 //#include "modes.h"
 //#include "cpu_support.h"
 #include "arch.h"
+#ifdef __cplusplus
+extern "C"{
+#endif // __cplusplus
+
 
 void pitch_downsample(celt_sig *x[], opus_val16 *x_lp,
       int len, int C);
@@ -147,3 +151,7 @@ void celt_pitch_xcorr(const opus_val16 *_x, const opus_val16 *_y,
       opus_val32 *xcorr, int len, int max_pitch);
 
 #endif
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
