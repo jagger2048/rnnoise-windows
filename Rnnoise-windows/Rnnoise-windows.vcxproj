@@ -23,32 +23,32 @@
     <ProjectGuid>{A7BC8C57-1AAB-4C5D-B1B5-4117D1621C4B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Rnnoisewindows</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -76,7 +76,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
-    <IncludePath>$(ProjectDir)include\;$(ProjectDir)include\rnnoise\;$(ProjectDir)include\audiofile\;$(IncludePath)</IncludePath>
+    <IncludePath>C:\workspace\Repository\rnnoise-windows\Rnnoise-windows\src;$(ProjectDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -106,7 +106,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\workspace\Repository\rnnoise-windows\Rnnoise-windows\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,31 +151,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="include\rnnoise\celt_lpc.c" />
-    <ClCompile Include="include\rnnoise\kiss_fft.c" />
-    <ClCompile Include="include\rnnoise\pitch.c" />
-    <ClCompile Include="include\rnnoise\rnn.c" />
-    <ClCompile Include="include\rnnoise\rnn_data.c" />
     <ClCompile Include="Rnnoise-windows.cpp" />
+    <ClCompile Include="src\celt_lpc.c" />
+    <ClCompile Include="src\kiss_fft.c" />
+    <ClCompile Include="src\pitch.c" />
+    <ClCompile Include="src\rnn.c" />
+    <ClCompile Include="src\rnn_data.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\audiofile\dr_wav.h" />
-    <ClInclude Include="include\audiofile\wavfile.h" />
-    <ClInclude Include="include\rnnoise\arch.h" />
-    <ClInclude Include="include\rnnoise\celt_lpc.h" />
-    <ClInclude Include="include\rnnoise\common.h" />
-    <ClInclude Include="include\rnnoise\denoise.h" />
-    <ClInclude Include="include\rnnoise\kiss_fft.h" />
-    <ClInclude Include="include\rnnoise\opus_types.h" />
-    <ClInclude Include="include\rnnoise\pitch.h" />
-    <ClInclude Include="include\rnnoise\rnn.h" />
-    <ClInclude Include="include\rnnoise\rnnoise.h" />
-    <ClInclude Include="include\rnnoise\rnn_data.h" />
-    <ClInclude Include="include\rnnoise\tansig_table.h" />
-    <ClInclude Include="include\rnnoise\_kiss_fft_guts.h" />
+    <ClInclude Include="dr_wav.h" />
+    <ClInclude Include="include\arch.h" />
+    <ClInclude Include="include\celt_lpc.h" />
+    <ClInclude Include="include\common.h" />
+    <ClInclude Include="include\denoise.h" />
+    <ClInclude Include="include\kiss_fft.h" />
+    <ClInclude Include="include\opus_types.h" />
+    <ClInclude Include="include\pitch.h" />
+    <ClInclude Include="include\rnn.h" />
+    <ClInclude Include="include\rnnoise.h" />
+    <ClInclude Include="include\rnn_data.h" />
+    <ClInclude Include="include\tansig_table.h" />
+    <ClInclude Include="include\_kiss_fft_guts.h" />
+    <ClInclude Include="wavfile.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\rnnoise\rnn_train.py" />
+    <Text Include="src\CMakeLists.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

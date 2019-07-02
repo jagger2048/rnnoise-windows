@@ -298,7 +298,7 @@ void pitch_search(const opus_val16 *x_lp, opus_val16 *y,
    celt_assert(max_pitch>0);
    lag = len+max_pitch;
 
-   opus_val16 *x_lp4 = (opus_val16 *)malloc( (len >> 2) * sizeof(opus_val16) ) ;	// ¶¯Ì¬Êý×éÉú³É
+   opus_val16 *x_lp4 = (opus_val16 *)malloc( (len >> 2) * sizeof(opus_val16) ) ;	// ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
    opus_val16 *y_lp4 = (opus_val16 *)malloc( (lag >> 2) * sizeof(opus_val16) ) ;
    opus_val32 *xcorr = (opus_val32 *)malloc((max_pitch>>1) * sizeof(opus_val32) );
 
@@ -389,7 +389,7 @@ void pitch_search(const opus_val16 *x_lp, opus_val16 *y,
    *pitch = 2*best_pitch[0]-offset;
 
 
-   free(x_lp4);			// ÊÍ·Å
+   free(x_lp4);			// ï¿½Í·ï¿½
    free(y_lp4);
    free(xcorr);
 }
@@ -454,7 +454,7 @@ opus_val16 remove_doubling(opus_val16 *x, int maxperiod, int minperiod,
 
    T = T0 = *T0_;
    //opus_val32 yy_lookup[maxperiod+1];
-   opus_val32 *yy_lookup = (opus_val32*)malloc(sizeof(opus_val32) * (maxperiod+1) ); // ½¨Á¢²éÕÒ±í
+   opus_val32 *yy_lookup = (opus_val32*)malloc(sizeof(opus_val32) * (maxperiod+1) ); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò±ï¿½
 
    dual_inner_prod(x, x, x-T0, N, &xx, &xy);
    yy_lookup[0] = xx;
@@ -536,6 +536,6 @@ opus_val16 remove_doubling(opus_val16 *x, int maxperiod, int minperiod,
       *T0_=minperiod0;
 
 
-   free(yy_lookup);			// ÊÍ·Å²éÕÒ±í
+   free(yy_lookup);			// ï¿½Í·Å²ï¿½ï¿½Ò±ï¿½
    return pg;
 }
