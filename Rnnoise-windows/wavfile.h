@@ -1,12 +1,14 @@
-﻿#pragma once
+#pragma once
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
-#include "dr_wav.h"
 
 #ifndef DR_WAV_IMPLEMENTATION
 #define DR_WAV_IMPLEMENTATION
 #endif // DR_WAV_IMPLEMENTATION
+
+#include "dr_wav.h"
+
 
 #ifdef __cplusplus
 //extern "C" {
@@ -15,7 +17,7 @@
 
 
 	// A package of the dr_wav library for easy to use.
-	typedef struct 
+	typedef struct
 	{
 		unsigned int channels;
 		unsigned int sampleRate;

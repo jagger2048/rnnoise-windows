@@ -121,7 +121,7 @@ void celt_fir(
       y[i] = ROUND16(sum, SIG_SHIFT);
    }
 
-   free(rnum);// VLA 
+   free(rnum);// VLA
 }
 
 void celt_iir(const opus_val32 *_x,
