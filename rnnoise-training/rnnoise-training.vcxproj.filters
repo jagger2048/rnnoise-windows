@@ -5,19 +5,13 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="资源文件">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="rnnoise">
-      <UniqueIdentifier>{901c215d-0660-456b-aaa0-a39bdafa1bbb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="unittest-tool">
-      <UniqueIdentifier>{d78d97c8-1e13-40d0-a195-77d70da8662d}</UniqueIdentifier>
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -42,17 +36,8 @@
     <ClCompile Include="..\src\rnn_reader.c">
       <Filter>rnnoise</Filter>
     </ClCompile>
-    <ClCompile Include="rnnoise_demo.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\unittest-tool\dr_wav.h">
-      <Filter>unittest-tool</Filter>
-    </ClInclude>
-    <ClInclude Include="..\unittest-tool\unittest_helper.h">
-      <Filter>unittest-tool</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\rnnoise.h">
       <Filter>rnnoise</Filter>
     </ClInclude>
@@ -89,5 +74,10 @@
     <ClInclude Include="..\src\tansig_table.h">
       <Filter>rnnoise</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\rnn_train.py">
+      <Filter>rnnoise</Filter>
+    </None>
   </ItemGroup>
 </Project>
