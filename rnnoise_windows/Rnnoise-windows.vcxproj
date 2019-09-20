@@ -77,7 +77,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
-    <IncludePath>$(SolutionDir)rnnoise-windows\;$(SolutionDir)unittest-tool\;$(SolutionDir)src\;$(SolutionDir)include\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(SolutionDir)unittest-tool\;$(SolutionDir)src\;$(SolutionDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
