@@ -1,5 +1,6 @@
 cmake_minimum_required (VERSION 3.0)
 
-project ("Rnnoise-windows")
-add_subdirectory ("Rnnoise-windows")
-add_subdirectory ("Rnnoise-windows/src")
+
+project (rnnoise-windows LANGUAGES C)
+add_subdirectory ("./rnnoise_windows")
+add_subdirectory ("./src")

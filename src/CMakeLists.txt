@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.5)
-
 set(RN_NOISE_SRC
         denoise.c
         celt_lpc.c

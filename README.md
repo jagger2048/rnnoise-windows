@@ -24,7 +24,6 @@ You can reference the `rnnoise_demo()` function in the vs project `Rnnoise-windo
 2. rnnoise frame process and output
 
     ```c++
-    ...
     for (size_t n = 0; n < totalFrameCnt / 480; n++) {
         get_frame_f32(pWavIn, frameIn, 480); // get f32 pcm data
     
@@ -32,10 +31,9 @@ You can reference the `rnnoise_demo()` function in the vs project `Rnnoise-windo
     if (isOutput) {
             write_frames_f32(pWavOut, 480, frameOut); // output to wav file
         }
-}
-    ...
-    ```
-
+    }
+```
+    
 3. destroy rnnoise object
 
 ```c++
@@ -179,11 +177,14 @@ The training script  has a function called "resume from break point". While the 
 
 ## Update log
 
-version 1.2 update training steps and merge the code from official branch, cmake support fails at this version
+| Version | log                                                          |
+| ------- | ------------------------------------------------------------ |
+| 1.2.1   | fix cmake support for Linux/wsl platform;  fix output stream missing bug in denoise.c when training |
+| 1.2     | update training steps and merge the code from official branch, cmake support fails at this version |
+| 1.1     | remove some extra files and test for vs2019                  |
+| 1.0     | add cmake support and test for vs2017                        |
 
-version 1.1 remove some extra files and test for vs2019
 
-version 1.0	add cmake support and test for vs2017
 
 
 
