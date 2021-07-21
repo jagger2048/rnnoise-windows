@@ -194,8 +194,6 @@
     <ClCompile Include="..\src\rnn.c" />
     <ClCompile Include="..\src\rnn_data.c" />
     <ClCompile Include="..\src\rnn_reader.c" />
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="rnnoise_static.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
