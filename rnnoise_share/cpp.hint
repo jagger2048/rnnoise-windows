@@ -1,0 +1,2 @@
+#define RNNOISESHARE_API __declspec(dllexport)
+#define RNNOISESHARE_API __declspec(dllimport)
