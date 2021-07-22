@@ -173,7 +173,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="..\src\compile.sh" />
-    <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\rnnoise.h" />
